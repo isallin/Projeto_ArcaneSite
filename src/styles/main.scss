@@ -1,6 +1,7 @@
 @use 'variaveis';
 @use 'hero';
 @use 'header';
+@use 'trailer';
 
 * {
     margin: 0;
@@ -8,6 +9,10 @@
     box-sizing: border-box;
     list-style: none;
     font-family: "Roboto", system-ui;
+}
+
+body{
+    background-color: variaveis.$corDeFundo;
 }
 
 @mixin text($fontSize: 18px) {
@@ -27,4 +32,23 @@
 
 .text--big {
     @include text(24px);
+}
+
+
+@mixin title($fontSize: 40px) {
+    @include text ($fontSize);
+    font-size: $fontSize;
+    color: variaveis.$corTextoPrincipal;
+}
+
+.title {
+    @include title();
+}
+
+.title--small {
+    @include title(28px);
+}
+
+.title--big {
+    @include title(64px);
 }

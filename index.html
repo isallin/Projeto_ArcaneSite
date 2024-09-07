@@ -11,29 +11,29 @@
 
 </head>
 <body>
+    <header class="header">
+        <div class="header__content">
+            <span>
+                <img class="header__logo" src="./dist/images/riot_games_logo.png" alt="Riot Games">
+            </span>
+            <ul class="header__links" >
+                <li class="header__links__item">
+                    <a class="text--small" href="#">INÍCIO</a>
+                </li>
+                <li class="header__links__item">
+                    <a class="text--small" href="#">SOBRE</a>
+                </li>
+                <li class="header__links__item">
+                    <a class="text--small" href="#">CONTATO</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <section class="hero">
-        <header class="header">
-            <div class="header__content">
-                <h1>
-                    <img class="header__logo" src="./dist/images/riot_games_logo.png" alt="Riot Games">
-                </h1>
-                <ul class="header__links" >
-                    <li class="header__links__item">
-                        <a class="text--small" href="#">INÍCIO</a>
-                    </li>
-                    <li class="header__links__item">
-                        <a class="text--small" href="#">SOBRE</a>
-                    </li>
-                    <li class="header__links__item">
-                        <a class="text--small" href="#">CONTATO</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
         <div class="hero__content">
-            <div class="hero__content__left">
+            <h1 class="hero__content__left">
                 <img src="./dist/images/arcane_logo.webp">
-            </div>
+            </h1>
             <div class="hero__content__right">
                 <div class="hero__content__right__info1">
                     <p class="text">
@@ -59,7 +59,32 @@
                 <img src="./dist/images/anneaward.svg" alt="Annie Award">
             </div>
         </div>
+    </section>
 
+    <section class="trailer">
+        <video autoplay loop muted plays-inline class="trailer__clip">
+            <source src="./dist/images/arcane_video.mp4" type="video/mp4">
+        </video>
+        <div class="trailer__container">
+            <div class="trailer__container__content">
+                <div class="trailer__container__content__left">
+                    <h2 class="title--big">ARCANE 2</h2>
+                    <p class="text--big">
+                        ESTREIA NOVEMBRO NA NETFLIX
+                    </p>
+                    <p class="text" href="">
+                        ASSISTA O TRAILER INTEIRO NO YOUTUBE
+                    </p>
+                </div>
+                <a class="trailer__container__content__right">
+                    <iframe width="580" height="335" src="https://www.youtube.com/embed/s4cqzF6tMBQ?si=3C_9AdxXS9kOXjlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        
     </section>
 </body>
 </html>

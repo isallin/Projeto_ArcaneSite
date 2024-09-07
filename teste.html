@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .trailer{
+    
+    &__clip{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+    }
+
+    &__container{
+        margin: 0;
+        display: flex;
+
+        &__content{
+            display: flex;
+
+            &__left{
+                display: flex;
+                flex-direction: column;
+            }
+    
+            
+            &__right{
+                display: flex;
+    
+                img{
+                    width: 300px;
+                }
+            }
+    
+        }
+
+    }
+
+
+}
+
+
+    </style>
+</head>
+<body>
+    <section class="trailer">
+        <video autoplay loop muted plays-inline class="trailer__clip">
+            <source src="./dist/images/arcane_video.mp4" type="video/mp4">
+        </video>
+    <div class="trailer__container">
+        <div class="trailer__container__content">
+            <div class="trailer__container__content__left">
+                <h2 class="title--big">ARCANE 2</h2>
+                <p class="text--big">
+                    ESTREIA NOVEMBRO NA NETFLIX
+                </p>
+            </div>
+            <div class="trailer__container__content__right">
+                <img src="./dist/images/secao3_ytlink.jpeg">
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+</html>

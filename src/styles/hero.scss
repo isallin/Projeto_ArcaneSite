@@ -58,13 +58,12 @@
                     color: variaveis.$corTextoPrincipal;
                     border: 3px solid variaveis.$corTextoPrincipal;
                     background: none;
-                    backdrop-filter: blur(5px);
                     cursor: pointer;
                     transition: 0.5s;
 
                     &:hover{
-                        background-color: #080a18;
-                        
+                        background-color: #921818;
+                        transform: scale(1.05);
                     }
                 }
             }
