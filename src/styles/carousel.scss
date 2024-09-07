@@ -1,0 +1,59 @@
+.carousel{
+    width: 100%;
+    min-height: 80vh;
+    background: linear-gradient(rgb(2, 12, 24),rgb(8, 21, 36),rgb(37, 57, 80));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__wrapper{
+
+        &__list{
+
+            &__item{
+                background-color: #dadada;
+                padding-bottom: 20px;
+                box-shadow: 0 10px 10px rgb(0,0,0,0.5);
+                border: 1px solid transparent;
+                transition: 0.5s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h3{
+                    text-align: center;
+                }
+
+                &:hover{
+                    border-color: rgb(8, 21, 36);
+                }
+
+                &__link{
+                    text-align: center;
+                    width: 341px;
+
+                    &__card{
+                        margin-bottom: 20px;
+                    }
+
+                    button{
+                        height: 35px;
+                        width: 35px;
+                        color: rgb(8, 21, 36);
+                        border-radius: 50%;
+                        margin: 15px 5px;
+                        border: 2px solid rgb(8, 21, 36);
+                        cursor: pointer;
+                        transform: rotate(-45deg);
+                        transition: 0.5s ease;
+
+                        &:hover{
+                            background-color: rgb(8, 21, 36);
+                            color: #ddd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

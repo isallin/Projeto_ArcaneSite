@@ -1,19 +1,28 @@
 .trailer{
-    display: flex;
-    justify-content: center; 
-    align-items: center;  
+    position: relative;
+    width: 100%;
     height: 100vh;
-    background-image: url('');
-
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
     
     &__clip{
         position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
         z-index: -1;
-        width: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
     }
 
     &__container{
+        z-index: 1;
         display: flex;
+        text-align: left;
 
         &__content{
             display: flex;
@@ -34,6 +43,9 @@
                 iframe{
                     box-shadow: 10px 10px 5px rgb(14, 14, 14);
                     transition: 0.5s;
+                    width:600px;
+                    height:355px;
+
                     &:hover{
                         transform: scale(1.05);
                     }
@@ -46,4 +58,3 @@
 
 
 }
-

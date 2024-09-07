@@ -2,6 +2,8 @@
 @use 'hero';
 @use 'header';
 @use 'trailer';
+@use 'about';
+@use 'carousel';
 
 * {
     margin: 0;
@@ -31,7 +33,7 @@ body{
 }
 
 .text--big {
-    @include text(24px);
+    @include text(32px);
 }
 
 
@@ -50,5 +52,19 @@ body{
 }
 
 .title--big {
-    @include title(64px);
+    @include title(72px);
+}
+
+.button{
+    padding: 15px 25px;
+    font-size: 32px;
+    color: variaveis.$corTextoPrincipal;
+    border: 2px solid variaveis.$corTextoPrincipal;
+    background: variaveis.$corBotao;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover{
+        background-color: lighten(variaveis.$corBotao, 5%);
+    }
 }

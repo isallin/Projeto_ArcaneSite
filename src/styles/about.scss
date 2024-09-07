@@ -1,0 +1,35 @@
+.about{
+    width: 100%;
+    min-height: 60vh;
+    background-image: url(/dist/images/secao3_wallpaper.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 0 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__image{
+        text-align: center;
+        width: 50%;
+        img{
+            width: 70%;
+        }
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 50%;
+        img{
+            width: 370px;
+        }
+        p{
+            width: 40vw;
+        }
+    }
+}
