@@ -1,58 +1,76 @@
+@use 'variaveis';
+
 .carousel{
     width: 100%;
     min-height: 80vh;
-    background: linear-gradient(rgb(2, 12, 24),rgb(8, 21, 36),rgb(37, 57, 80));
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    padding: 0 5vw;
+    background: linear-gradient(rgb(1, 4, 8),rgb(5, 18, 34),rgb(27, 52, 80));
+
+    h2{
+        text-align: center;
+        margin-top: 10vh;
+        font-weight: 100;
+        font-size: 56px;
+        color:variaveis.$corTextoPrincipal;
+
+        @media (max-width: 768px){
+            font-size: 4vh;
+        }
+    }
 
     &__wrapper{
-
+        padding-bottom: 40px;
+        
         &__list{
-
             &__item{
-                background-color: #dadada;
+                background-color:variaveis.$corTextoPrincipal;
                 padding-bottom: 20px;
-                box-shadow: 0 10px 10px rgb(0,0,0,0.5);
-                border: 1px solid transparent;
+                border: 2px solid transparent;
                 transition: 0.5s ease;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                text-align: center;
+                user-select: none;
 
                 h3{
                     text-align: center;
+                    font-size: 15px;
                 }
 
                 &:hover{
-                    border-color: rgb(8, 21, 36);
+                    border-color: variaveis.$corBorda;
                 }
 
-                &__link{
-                    text-align: center;
-                    width: 341px;
+                &__card{
+                    margin-bottom: 10px;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
 
-                    &__card{
-                        margin-bottom: 20px;
-                    }
+                .material-symbols-outlined{
+                    margin-top: 10px;
+                }
 
                     button{
                         height: 35px;
                         width: 35px;
-                        color: rgb(8, 21, 36);
+                        color:variaveis.$corBorda;
                         border-radius: 50%;
                         margin: 15px 5px;
-                        border: 2px solid rgb(8, 21, 36);
+                        border: 2px solid variaveis.$corBorda;
                         cursor: pointer;
                         transform: rotate(-45deg);
                         transition: 0.5s ease;
 
                         &:hover{
-                            background-color: rgb(8, 21, 36);
-                            color: #ddd;
+                            background-color:variaveis.$corBorda;
+                            color:variaveis.$corTextoPrincipal;
                         }
                     }
-                }
+                
             }
         }
     }

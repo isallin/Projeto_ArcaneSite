@@ -11,9 +11,19 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 768px){
+        display: block;
+    }
+
     &__image{
         text-align: center;
         width: 50%;
+
+        @media (max-width: 768px){
+            width:100%;
+            margin-top: 3vh;
+        }
+
         img{
             width: 70%;
         }
@@ -25,11 +35,29 @@
         align-items: center;
         text-align: center;
         width: 50%;
+
+        @media (max-width: 768px){
+            width:100%;
+        }
+
         img{
             width: 370px;
+
+            @media (max-width: 768px){
+                width:100%;
+            }
+
+            @media screen and (min-width:641px) and (max-width:1023px){
+                width:400px;
+            }
         }
         p{
             width: 40vw;
+
+            @media (max-width: 768px){
+                width:100%;
+                margin-bottom: 3vh;
+            }
         }
     }
 }

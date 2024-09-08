@@ -4,6 +4,8 @@
 @use 'trailer';
 @use 'about';
 @use 'carousel';
+@use 'lol';
+@use 'contact';
 
 * {
     margin: 0;
@@ -26,14 +28,38 @@ body{
 
 .text--small {
     @include text(16px);
+
+    @media (max-width:768px){
+        @include text(14px)
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        @include text(15px)
+    }
 }
 
 .text {
     @include text();
+
+    @media (max-width:768px){
+        @include text(16px)
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        @include text(17px)
+    }
 }
 
 .text--big {
     @include text(32px);
+    
+    @media (max-width:768px){
+        @include text(30px)
+    }
+
+    @media (max-width:768px){
+        @include text(31px)
+    }
 }
 
 
@@ -45,14 +71,26 @@ body{
 
 .title {
     @include title();
-}
 
-.title--small {
-    @include title(28px);
+    @media (max-width:768px){
+        @include title(38px)
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        @include title(39px)
+    }
 }
 
 .title--big {
     @include title(72px);
+
+    @media (max-width:768px){
+        @include title(70px)
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        @include title(71px)
+    }
 }
 
 .button{
@@ -66,5 +104,16 @@ body{
 
     &:hover{
         background-color: lighten(variaveis.$corBotao, 5%);
+    }
+
+    @media (max-width:768px){
+        font-size: 20px;
+        width: 90vw;
+        margin-bottom: 3vh;
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        font-size: 25px;
+        width: 60vw;
     }
 }

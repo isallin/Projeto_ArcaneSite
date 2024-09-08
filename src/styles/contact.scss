@@ -1,0 +1,23 @@
+@use 'variaveis';
+
+.contact{
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &__social{
+        color: variaveis.$corTextoPrincipal;
+        padding-bottom: 10px;
+
+        svg{
+            margin: 10px;
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+
+        }
+    }
+

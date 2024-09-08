@@ -1,3 +1,4 @@
+@use 'variaveis';
 .trailer{
     position: relative;
     width: 100%;
@@ -5,6 +6,9 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    @media (max-width: 1023px){
+        align-items: center;
+    }
     
     &__clip{
         position: absolute;
@@ -23,16 +27,26 @@
         z-index: 1;
         display: flex;
         text-align: left;
-
+        
         &__content{
             display: flex;
             align-items: center;
+
+            @media (max-width: 1023px){
+                display: block;
+                text-align: center;
+            }
 
             &__left{
                 padding: 0 25px;
                 display: flex;
                 flex-direction: column;
-                text-shadow: 3px 3px 5px rgb(8, 8, 8);
+                text-shadow: 3px 3px 5px variaveis.$corDeFundo;
+
+                @media (max-width: 1023px){
+                    padding: 1vw;
+                    margin-bottom: 3vh;
+                }
             }
     
             
@@ -41,13 +55,22 @@
                 display: flex;
                 
                 iframe{
-                    box-shadow: 10px 10px 5px rgb(14, 14, 14);
+                    box-shadow: 10px 10px 5px variaveis.$corDeFundo;
                     transition: 0.5s;
                     width:600px;
                     height:355px;
 
                     &:hover{
                         transform: scale(1.05);
+                    }
+
+                    @media (max-width: 768px){
+                        width: 100%;
+                    }
+
+                    @media screen and (min-width:641px) and (max-width:1023px){
+                        width:600px;
+                        height:355px;
                     }
                 }
             }

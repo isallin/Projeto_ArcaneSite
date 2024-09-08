@@ -1,11 +1,24 @@
 @use 'variaveis';
 
 .header{
+    z-index: 10;
     position: sticky;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.50);
+    background-color: rgba(variaveis.$corDeFundo, 0.50);
     padding: 0 3vw;
+
+    &--is-hidden{
+        display: none;
+        background-color: background-color .5s ease;
+
+            .header{
+            &__content__logo, &__links__item{
+                visibility: hidden;
+                transition: .5s ease;
+            }
+        }
+    }
 
     &__content{
         padding: 2vh 0;
@@ -15,25 +28,40 @@
         img{
             height: 36px;
         }
+
+        @media (max-width: 1023px){
+            display: block;
+            text-align: center;
+        }
     }
 
     &__links{
         display: flex;
+
+        @media (max-width: 1023px){
+            margin-top: 3vh;
+        }
 
         &__item{
             width: 100%;
             
             a{
                 padding: 5px 20px;
-                transition: 0.3s;
+                @media screen and (min-width:641px) and (max-width:1023px){
+                    font-size: 20px;
+                }
     
                 &:hover{
-                    background-color: #fff;
+                    background-color: variaveis.$corTextoPrincipal;
                     border-radius: 3px;
-                    color: #000;
+                    color: variaveis.$corDeFundo;
                 }
             }
         }
     
     }
+}
+
+.hidden{
+    visibility: hidden;
 }
